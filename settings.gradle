@@ -1,0 +1,16 @@
+enableFeaturePreview('VERSION_CATALOGS')
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    versionCatalogs {
+        baseLibs {
+            from(files('gradle/baseLibs.versions.toml'))
+        }
+    }
+}
+rootProject.name = "DiplomaSuperApp"
+include ':app'
